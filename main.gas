@@ -1,0 +1,11 @@
+function main() {
+  var text = "Aku input sekarang waktunya sholat {{waktusholat}}. Silahkan ditunaikan.";
+  var isWaktuSholat = apipedia_lib.NotifikasiJadwalSholat(text);
+  var penerima = "62899893.....";
+  var appkey = "";
+  var authey ="";
+  if (isWaktuSholat) {
+    var message = apipedia_lib.NotifikasiJadwalSholat(text);
+    Logger.log(apipedia_lib.sendtextwaconsole("628998937095", message, appkey, authey))
+  }
+}
